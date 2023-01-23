@@ -1,6 +1,6 @@
 #include "main.h"
 
- ************************ PRINT CHAR *************************/
+ ************************ PRINT CHAR ************************/
 /**
  * print_char - Prints a char
  * @types: List a of arguments
