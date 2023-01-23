@@ -1,6 +1,7 @@
 #include "main.h"
 
-/************************* PRINT CHAR *************************/
+/**
+ * *********************** PRINT CHAR *************************/
 
 /**
  * print_char - Prints a char
@@ -19,7 +20,14 @@ int print_char(va_list types, char buffer[],
 
 	return (handle_write_char(c, buffer, flags, width, precision, size));
 }
+<<<<<<< HEAD
+
+/**
+ * *********************** PRINT A STRING *************************/
+
+=======
 /************************* PRINT A STRING *************************/
+>>>>>>> 6cf0b5c912fc0b52a50ebc46f0c2e10cbf743349
 /**
  * print_string - Prints a string
  * @types: List a of arguments
@@ -74,7 +82,14 @@ int print_string(va_list types, char buffer[],
 
 	return (write(1, str, length));
 }
+<<<<<<< HEAD
+
+/**
+ * *********************** PRINT PERCENT SIGN *************************/
+
+=======
 /************************* PRINT PERCENT SIGN *************************/
+>>>>>>> 6cf0b5c912fc0b52a50ebc46f0c2e10cbf743349
 /**
  * print_percent - Prints a percent sign
  * @types: Lista of arguments
@@ -97,7 +112,18 @@ int print_percent(va_list types, char buffer[],
 	return (write(1, "%%", 1));
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+/**
+ * *********************** PRINT INT *************************/
+=======
+>>>>>>> b5efd70a78ad515f321bbe93724035a10e8585b6
 /************************* PRINT INT *************************/
+>>>>>>> b556bbb1e5cf234e01c0930540889cad56dd83ec
+
+=======
+/************************* PRINT INT *************************/
+>>>>>>> 6cf0b5c912fc0b52a50ebc46f0c2e10cbf743349
 /**
  * print_int - Print int
  * @types: Lista of arguments
@@ -141,7 +167,18 @@ int print_int(va_list types, char buffer[],
 	return (write_number(is_negative, i, buffer, flags, width, precision, size));
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+/**
+ * *********************** PRINT BINARY *************************/
+=======
+>>>>>>> b5efd70a78ad515f321bbe93724035a10e8585b6
 /************************* PRINT BINARY *************************/
+>>>>>>> b556bbb1e5cf234e01c0930540889cad56dd83ec
+
+=======
+/************************* PRINT BINARY *************************/
+>>>>>>> 6cf0b5c912fc0b52a50ebc46f0c2e10cbf743349
 /**
  * print_binary - Prints an unsigned number
  * @types: Lista of arguments
@@ -185,4 +222,70 @@ int print_binary(va_list types, char buffer[],
 		}
 	}
 	return (count);
+<<<<<<< HEAD
+=======
+     int flags, int width, int precision, int size)
+
+{
+
+     unsigned int n, m, i, sum;
+
+     unsigned int a[32];
+
+     int count;
+
+     UNUSED(buffer);
+
+     UNUSED(flags);
+
+     UNUSED(width);
+
+     UNUSED(precision);
+
+     UNUSED(size);
+
+     n = va_arg(types, unsigned int);
+
+     m = 2147483648; /* (2 ^ 31) */
+
+     a[0] = n / m;
+
+     for (i = 1; i < 32; i++)
+
+     {
+
+          m /= 2;
+
+          a[i] = (n / m) % 2;
+
+     }
+
+     for (i = 0, sum = 0, count = 0; i < 32; i++)
+
+     {
+
+          sum += a[i];
+
+          if (sum || i == 31)
+
+          {
+
+                char z = '0' + a[i];
+
+                write(1, &z, 1);
+
+                count++;
+
+          }
+
+     }
+
+     return (count);
+<<<<<<< HEAD
+=======
+
+>>>>>>> b5efd70a78ad515f321bbe93724035a10e8585b6
+>>>>>>> b556bbb1e5cf234e01c0930540889cad56dd83ec
+=======
+>>>>>>> 6cf0b5c912fc0b52a50ebc46f0c2e10cbf743349
 }
