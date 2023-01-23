@@ -1,6 +1,7 @@
 #include "main.h"
 
-/************************* PRINT CHAR *************************/
+/**
+ * *********************** PRINT CHAR *************************/
 
 /**
 
@@ -34,7 +35,8 @@ int print_char(va_list types, char buffer[],
 
 }
 
-/************************* PRINT A STRING *************************/
+/**
+ * *********************** PRINT A STRING *************************/
 
 /**
 
@@ -134,7 +136,8 @@ int print_string(va_list types, char buffer[],
 
 }
 
-/************************* PRINT PERCENT SIGN *************************/
+/**
+ * *********************** PRINT PERCENT SIGN *************************/
 
 /**
 
@@ -178,7 +181,8 @@ int print_percent(va_list types, char buffer[],
 
 }
 
-/************************* PRINT INT *************************/
+/**
+ * *********************** PRINT INT *************************/
 
 /**
 
@@ -250,7 +254,8 @@ int print_int(va_list types, char buffer[],
 
 }
 
-/************************* PRINT BINARY *************************/
+/**
+ * *********************** PRINT BINARY *************************/
 
 /**
 
@@ -331,5 +336,4 @@ int print_binary(va_list types, char buffer[],
      }
 
      return (count);
-
 }
