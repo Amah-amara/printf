@@ -10,7 +10,7 @@ int print_binary(int number){
 
     while (number >= 2){
 
-        arr[i] = number%2;
+        arr[i] = number % 2;
 
         number /= 2;
 
@@ -33,5 +33,4 @@ int print_binary(int number){
 
 
     return (count);
-
 }
